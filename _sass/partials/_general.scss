@@ -1,8 +1,8 @@
 body {
     font: {
         family: $body-font;
-        weight: $light;
-        size: 22px;
+        weight: $normal;
+        size: 16px;
     }
     line-height: 1.4;
     background: $white;
@@ -10,9 +10,15 @@ body {
 }
 
 .container {
-    max-width: 100%;
+    max-width: 1200px;
     position: relative;
     margin: 0 auto;
+    @extend %clearfix;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
 }
 
 .overview {
@@ -24,8 +30,7 @@ body {
     counter-reset: h1-counter;
     width: calc(100% - 320px);
 
-    border-left: 3px solid $green;
-    position: absolute;
+    border-left: 3px solid $primary-color;
     right: 0;
     float: right;
 
@@ -34,198 +39,199 @@ body {
     }
 
     .toggle {
-        position: absolute;
+        position: fixed;
         top: 5px;
         left: 5px;
     }
-}
 
-section {
+    section {
 
-    &:last-of-type {
-        padding-bottom: 300px;
-    }
+        &:last-of-type {
+            padding-bottom: 300px;
+        }
 
-    > p,
-    > ul,
-    > ol,
-    > div{
-        text-align: justify;
-        padding-left: 5%;
-        padding-right: 5%;
-        box-sizing: border-box;
-    }
+        > p,
+        > ul,
+        > ol,
+        > div{
+            text-align: justify;
+            padding-left: 5%;
+            padding-right: 5%;
+            box-sizing: border-box;
+        }
 
-    pre {
-        margin-left: 5%;
-        margin-right: 5%;
+        pre {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        > ol {
+            padding-left: calc(5% + 40px);
+        }
     }
-    > ol {
-        padding-left: calc(5% + 40px);
-    }
-}
-.content {
     h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
-        font-weight: $bold;
+        font-weight: $normal;
         line-height: 1;
-        color: $green;
+        color: $primary-color;
     }
 
     h1 {
-        font-size: 3.1em;
-        padding: 30px 0 0;
-        text-align: right;
-        border-bottom: $green 9px solid;
+        font-size: 2.8em;
+        padding: 30px 0 5pt 0.8em;
+        border-bottom: $primary-color 9px solid;
         width: 100%;
         line-height: 0.61;
         margin: 0 0 20px;
 
         &:before {
             content: counter(h1-counter) " ";
+            font-size: 75%;
         }
     }
 
-    .h1{
+    .h1 {
         counter-increment: h1-counter;
         counter-reset: h2-counter;
         padding-top: 80px;
     }
 
     h2 {
-        font-size: 2em;
-        padding: 30px 0 0;
+        font-size: 1.8em;
+        padding: 30px 0 5pt;
         width: 90%;
-        text-align: center;
-        border-bottom: 5px solid $green;
+        // text-align: center;
+        border-bottom: 5px solid $primary-color;
         margin: 0 auto 20px;
         line-height: 0.63;
 
         &:before {
             content: counter(h1-counter) "." counter(h2-counter) " ";
+            font-size: 75%;
         }
     }
 
-    .h2{
+    .h2 {
         counter-increment: h2-counter;
         counter-reset: h3-counter;
         padding-top: 60px;
     }
 
 
-    h3{
-        font-size: 1.7em;
-        padding: 20px 0 0;
+    h3 {
+        font-size: 1.6em;
+        padding: 20px 0 5pt;
         width: 90%;
         text-align: left;
-        border-bottom: 4px solid $green;
+        border-bottom: 4px solid $primary-color;
         margin: 0 auto 20px;
         line-height: 0.65;
 
         &:before {
             content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) " ";
+            font-size: 75%;
         }
     }
 
-    .h3{
+    .h3 {
         counter-increment: h3-counter;
         counter-reset: h4-counter;
         padding-top: 40px;
     }
 
-    h4{
-        font-size: 1.5em;
-        padding: 18px 0 0;
+    h4 {
+        font-size: 1.4em;
+        padding: 18px 0 5pt;
         width: 90%;
         text-align: left;
-        border-bottom: 3px solid $green;
+        border-bottom: 3px solid $primary-color;
         margin: 0 auto 18px;
         line-height: 0.67;
 
         &:before {
             content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) " ";
+            font-size: 75%;
         }
     }
 
-    .h4{
+    .h4 {
         counter-increment: h4-counter;
         counter-reset: h5-counter 1;
         padding-top: 30px;
     }
 
 
-    h5{
+    h5 {
         font-size: 1.3em;
-        padding: 40px 0 0;
+        padding: 40px 0 5pt;
         width: 90%;
         text-align: left;
-        border-bottom: 2px solid $green;
+        border-bottom: 2px solid $primary-color;
         margin: 0 auto 15px;
         line-height: 0.68;
 
         &:before {
             content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) " ";
+            font-size: 75%;
         }
     }
 }
 
-a{
+a {
     transition: .3s all;
-    color: $green;
+    color: $primary-color;
     text-decoration: none;
 
-    .content &{
-        border-bottom: $darkgreen 1px solid;
+    .content & {
+        border-bottom: $secondary-color 1px solid;
         padding: 0px 2px;
 
-        &:hover{
+        &:hover {
             border-bottom: transparent 1px solid;
         }
     }
 
-    &:hover{
-        color: $darkgreen;
+    &:hover {
+        color: $secondary-color;
     }
 }
 
-
-img{
+img {
     display: block;
     max-width: 100%;
     margin: 20px 0;
 }
 
-code{
-    font-family: 'Source Code Pro', 'Courier New', monospace;
+code {
+    font-family: $code-font;
 }
 
-.video_container{
+.video_container {
     margin: 30px auto;
     @include paddinghack(90%, 894, 510);
 
-    iframe{
+    iframe {
         @extend %paddinghack;
     }
 }
 
-#intro{
+#intro {
     padding-top: 20px;
 }
 
 code,
-pre{
+pre {
     white-space: pre-wrap;
     border-radius: 0px;
     border: 0;
 }
 
-iframe{
+iframe {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
     width: 100%;
 }
 
-p + p{
+p + p {
     margin-top: 20px;
 }

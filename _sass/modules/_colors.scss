@@ -1,10 +1,13 @@
-$white: #FDFDFD;
+$white: #fdFdfd;
 $black: #121212;
 
 $darkgray: #333;
-$mediumgray: #C7C6C5;
+$mediumgray: #c7c6c5;
 $lightgray: #e3e3e3;
 
 $gray: #5e5e5e;
-$green: #385958;
-$darkgreen: darken($green, 20%);
+$primary-color: $black;
+// $primary-color: #95300c;
+$secondary-color: darken(#95300c, 20%);
+// $header-color: mix(#a81a0d, #95300c);
+$header-color: lighten($black, 12%);

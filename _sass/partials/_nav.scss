@@ -1,15 +1,15 @@
-.toggle{
-    &:hover{
+.toggle {
+    &:hover {
         cursor: pointer;
         opacity: .8;
     }
 
-    @media screen and (min-width: $sidebar-collapse + 1){
+    @media screen and (min-width: $sidebar-collapse + 1) {
         display: none;
     }
 
     padding: 10px 9px;
-    background-color: fadeout(#fff, 50%);
+    background-color: fade-out(#fff, 0.1);
     border: 1px solid #E8E8E8;
     border-radius: 5px;
 
@@ -28,33 +28,41 @@
 
 // Overview
 .overview {
-    // position: fixed;
+    position: relative;
     float: left;
     top: 0px;
-    left: 0px;
+    // left: 0px;
     height: 100%;
     overflow-y: auto;
     transition: .3s all;
     background: $white;
 
-    @media screen and (max-width: $sidebar-collapse){
+    @media screen and (max-width: $sidebar-collapse) {
+        position: fixed;
+        border-right: 3px solid $primary-color;
         left: -320px;
         transition: .3s all ease;
         transform: translate(0, 0);
         z-index: 100;
+        height: 100%;
 
-        &.open{
+        &.open {
             transform: translate(320px, 0);
         }
     }
 
-    .toggle{
+    &.fixed {
+        position: fixed;
+    }
+
+    .toggle {
         position: absolute;
         top: 5px;
         right: 5px;
         z-index: 100;
     }
     ul {
+        margin-top: 0;
         list-style: none;
         counter-reset: nested-counter;
         padding-left: 0;
@@ -67,19 +75,24 @@
         width: 100%;
         box-sizing: border-box;
         > li {
-            border-bottom: 1px solid rgba($green, .3);
+            border-bottom: 1px solid rgba($primary-color, .3);
             a {
                 display: block;
-                padding: 10px 20px;
-                line-height: 1;
-                border-bottom: 1px solid rgba($green, .2);
+                padding: 13px 20px;
+                line-height: 1.2;
+                border-bottom: 1px solid rgba($primary-color, .2);
                 &:before {
                     content: counters(nested-counter, ".") " ";
                     font-size: 0;
                 }
                 &:hover {
-                    background: rgba($green, .1);
+                    background: rgba($primary-color, .1);
                 }
+            }
+        }
+        > li.parent {
+            a {
+                padding: 10px 20px;
             }
             li {
                 a {

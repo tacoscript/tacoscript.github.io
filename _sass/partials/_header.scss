@@ -1,15 +1,11 @@
-header{
-    background:{
-        size: auto;
-        repeat: repeat;
-        image: url(../img/bg.jpg);
-    }
+header {
+    background-color: #87ad9e;
     height: 150px;
     text-align: center;
     position: relative;
     max-width: 100%;
 
-    span{
+    h1 {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -19,5 +15,6 @@ header{
         color: $white;
         text-transform: uppercase;
         font-weight: bold;
+        margin: 0;
     }
 }

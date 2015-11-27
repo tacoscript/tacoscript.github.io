@@ -1,6 +1,8 @@
 ---
+# Required front matter for jekyll
 ---
-@import "partials/reset";
+* { box-sizing: border-box; }
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css");
 @import "partials/base";
 @import "partials/general";
 @import "partials/header";

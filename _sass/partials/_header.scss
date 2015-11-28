@@ -29,6 +29,9 @@ header {
         @media screen and (max-width: $sidebar-collapse) {
             font-size: 1.6em;
         }
+        @media screen and (max-width: $sidebar-collapse * 4 / 7) {
+            font-size: 1.2em;
+        }
 
 
         border-bottom: 2px solid black;

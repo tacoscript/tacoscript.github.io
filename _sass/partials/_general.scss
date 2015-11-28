@@ -16,6 +16,16 @@ body {
     @extend %clearfix;
 }
 
+.container-fluid {
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    @extend %clearfix;
+}
+
+.clearfix {
+    @extend %clearfix;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font;
@@ -174,6 +184,14 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 75%;
         }
     }
+
+
+    iframe {
+        padding-left: 5%;
+        padding-right: 5%;
+        box-sizing: border-box;
+        width: 100%;
+    }
 }
 
 a {
@@ -225,13 +243,10 @@ pre {
     border: 0;
 }
 
-iframe {
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
-    width: 100%;
-}
-
 p + p {
     margin-top: 20px;
+}
+
+.tiny {
+    font-size: 0.6rem;
 }

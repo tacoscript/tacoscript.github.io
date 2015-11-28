@@ -44,3 +44,17 @@ $sidebar-collapse: 1000px;
     margin: 0px auto;
 }
 // @extend %center
+
+%col {
+    float: left;
+    padding: 0 7.5px;
+}
+
+%col-50 {
+    @extend %col;
+    width: 50%;
+
+    @media screen and (max-width: $sidebar-collapse) {
+        width: 100%;
+    }
+}

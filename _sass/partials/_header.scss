@@ -1,11 +1,14 @@
 header {
     background-color: $header-color;
-    height: 150px;
-    min-height: 7.5vw;
-    text-align: center;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
+
+    .h1-container {
+        min-height: 7.5vw;
+        height: 150px;
+        text-align: center;
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+    }
 
     h1 {
         position: absolute;
@@ -19,5 +22,38 @@ header {
         font-weight: bold;
         margin: 0;
         font-size: 14vw;
+    }
+
+    .jumbotron {
+        font-size: 2.0em;
+
+        @media screen and (max-width: $sidebar-collapse) {
+            font-size: 1.6em;
+        }
+
+
+        border-bottom: 2px solid black;
+        background-color: $white;
+
+        text-align: center;
+        padding: 6rem 15px;
+        > * {
+            position: relative;
+        }
+    }
+
+    .code-wrapper {
+        @extend %col-50;
+        font-size: 1.4rem;
+    }
+    .code-javascript, .code-tacoscript {
+        margin: 1em auto;
+        max-width: 50ex;
+    }
+    pre {
+        text-align: left;
+    }
+    .caption {
+        font-style: italic;
     }
 }

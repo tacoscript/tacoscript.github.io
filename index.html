@@ -3,22 +3,46 @@ layout: index
 title: index
 ---
 
-{% assign entries = site.entries | sort: "number" %}
-{% for entry in entries %}
-    {% if entry.title != 'index'%}
-        <section id="{{ entry.sectionid }}" class="{{ entry.sectionclass }}">
-            {% case entry.sectionclass %}
-                {% when 'h1' %}
-                    <h1>{{ entry.title }}</h1>
-                {% when 'h2' %}
-                    <h2>{{ entry.title }}</h2>
-                {% when 'h3' %}
-                    <h3>{{ entry.title }}</h3>
-                {% when 'h4' %}
-                    <h4>{{ entry.title }}</h4>
-            {% endcase %}
-
-            {{ entry.content }}
-        </section>
-    {% endif %}
-{% endfor %}
+<div class="container-fluid">
+  <p>
+    TacoScript is an es2015+-isomorphic altjs language, taking inspiration from Coffeescript,
+    Python, and Ruby, and other modern languages.
+  </p>
+</div>
+<div class="code-wrapper">
+<div class="code-javascript">
+  <div class="caption">JavaScript</div>
+{% highlight javascript %}
+setTimeout(function() {
+  if (true) {
+    console.log("Tacos!");
+  }
+}, 100);
+{% endhighlight %}
+</div>
+</div>
+<div class="code-wrapper">
+<div class="code-tacoscript">
+  <div class="caption">TacoScript</div>
+{% highlight coffeescript %}
+setTimeout(() ->
+  if true
+    console.log("Tacos!");
+, 100)
+{% endhighlight %}
+<!-- <span class="tiny">(or)</span>
+{% highlight coffeescript %}
+setTimeout!
+  () -> if true
+    console.log("Tacos!")
+  100
+{% endhighlight %} -->
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="container-fluid">
+  <p>
+    <button class="ui button huge">Try it Out! <em>(soon)</em></button>
+  </p>
+</div>
+<iframe src="https://ghbtns.com/github-btn.html?user=forivall&repo=tacoscript&type=star&count=false&size=large" frameborder="0" scrolling="0" width="75px" height="30px"></iframe>

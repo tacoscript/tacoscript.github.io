@@ -47,15 +47,33 @@ header {
     .code-wrapper {
         @extend %col-50;
         font-size: 1.4rem;
+        @media screen and (max-width: $sidebar-collapse * 4 / 7) {
+            font-size: 1.2rem;
+        }
+
+        @media screen and (max-width: $sidebar-collapse / 3) {
+            font-size: 1rem;
+        }
+
     }
     .code-javascript, .code-tacoscript {
         margin: 1em auto;
         max-width: 50ex;
+
+        @media screen and (max-width: $sidebar-collapse * 4 / 7) {
+            margin: 0.5em auto;
+        }
+
     }
     pre {
         text-align: left;
     }
     .caption {
         font-style: italic;
+    }
+    figure {
+        @media screen and (max-width: $sidebar-collapse * 4 / 7) {
+            margin: 0.5em auto;
+        }
     }
 }

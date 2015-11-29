@@ -1,3 +1,0 @@
-[submodule "repl"]
-	path = repl
-	url = git://github.com/tacoscript/repl

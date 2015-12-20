@@ -1,5 +1,4 @@
 header {
-    background-color: $header-color;
 
     .h1-container {
         height: 8vw;
@@ -7,6 +6,7 @@ header {
         position: relative;
         max-width: 100%;
         overflow: hidden;
+        background-color: $header-color;
     }
 
     h1 {
@@ -35,7 +35,7 @@ header {
 
 
         border-bottom: 2px solid black;
-        background-color: $white;
+        background-color: transparent;
 
         text-align: center;
         padding: 6vw 15px;

@@ -5,8 +5,18 @@ body {
         size: 16px;
     }
     line-height: 1.4;
-    background: $white;
     color: $black;
+    background: {
+        color: $white;
+        image: url("/img/taco-emoji.svg");
+        position: 50% 50%;
+        repeat: no-repeat;
+        attachment: fixed;
+    }
+    > .page {
+        background-color: transparentize($white, 0.3);
+        min-height: 100vh;
+    }
 }
 
 .container {

@@ -5,23 +5,25 @@
     </head>
 
     <body>
-        <header>
-            {% include header-content.html %}
-            <div class="jumbotron">
-                {{ content }}
-            </div>
-        </header>
-        <!-- <div class="container">
-            <div class="overview">
-                <span class="toggle"></span>
-                {% include nav.html %}
-            </div>
+        <div class="page">
+            <header>
+                {% include header-content.html %}
+                <div class="jumbotron">
+                    {{ content }}
+                </div>
+            </header>
+            <div class="container">
+                <!--<div class="overview">
+                    <span class="toggle"></span>
+                    {% include nav.html %}
+                </div>
 
-            <div class="content">
-                <span class="toggle"></span>
-                {% include docs.html %}
+                <div class="content">
+                    <span class="toggle"></span>
+                    {% include docs.html %}
+                </div> -->
             </div>
-        </div> -->
         {% include foot.html %}
+        </div>
     </body>
 </html>

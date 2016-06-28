@@ -54,7 +54,6 @@ header {
         @media screen and (max-width: $sidebar-collapse / 3) {
             font-size: 1rem;
         }
-
     }
     .code-javascript, .code-tacoscript {
         margin: 1em auto;
@@ -63,7 +62,10 @@ header {
         @media screen and (max-width: $sidebar-collapse * 4 / 7) {
             margin: 0.5em auto;
         }
-
+    }
+    .hero-code-block {
+        margin: auto;
+        max-width: 24em;
     }
     pre {
         text-align: left;
